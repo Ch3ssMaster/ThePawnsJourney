@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import PuzzlesForStockfish from '@/components/PuzzlesForStockfish.vue';
+import PuzzlesForStockfish from '@/components/PuzzlesForStockfish.vue'
 import data from '../puzzles/puzzles_200.json'
-import type { Puzzle } from '@/types';
+import type { Puzzle } from '@/types'
 definePage({
   meta: {
     icon: 'mdi-fish',

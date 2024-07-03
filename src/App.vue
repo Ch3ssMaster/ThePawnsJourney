@@ -12,4 +12,3 @@ provide(
     <router-view />
   </v-app>
 </template>
-

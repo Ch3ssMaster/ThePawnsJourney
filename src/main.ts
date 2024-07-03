@@ -13,7 +13,8 @@ Object.values(
 ).forEach((v) => app.use(v))
 
 app.use(vue3GoogleLogin, {
-  clientId: '368514305696-6nuvllac0utemf8ad4ch38j6h002ih3g.apps.googleusercontent.com'
+  clientId:
+    '368514305696-6nuvllac0utemf8ad4ch38j6h002ih3g.apps.googleusercontent.com',
 })
 
 app.mount('#app')

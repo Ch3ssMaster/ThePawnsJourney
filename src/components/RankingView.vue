@@ -1,22 +1,26 @@
 <script setup lang="ts">
-const puzzleRankings = JSON.parse(localStorage.getItem('puzzleRankings') || '[]')
+const puzzleRankings = JSON.parse(
+  localStorage.getItem('puzzleRankings') || '[]',
+)
 const lastPuzzle = JSON.parse(localStorage.getItem('lastPuzzle') || '0')
 const currentPuzzle = ref(lastPuzzle)
 </script>
 
-
 <template>
   <v-row class="rankings" justify="center">
-  <div
-    v-for="(rank, index) in puzzleRankings"
-    :key="index"
-    :class="['rank-square', rank !== undefined ? `rank-${rank}` : 'default', index === currentPuzzle ? 'current-rank' : '']"
-  ></div>
+    <div
+      v-for="(rank, index) in puzzleRankings"
+      :key="index"
+      :class="[
+        'rank-square',
+        rank !== undefined ? `rank-${rank}` : 'default',
+        index === currentPuzzle ? 'current-rank' : '',
+      ]"
+    ></div>
   </v-row>
 </template>
 
 <style scoped>
-
 .center-text {
   text-align: center;
 }

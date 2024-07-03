@@ -87,7 +87,7 @@ export class Stockfish {
     }
 
     if (uciStringSplitted[0] === 'readyok') {
-      ;this.stockfish.postMessage('go depth 25')
+      this.stockfish.postMessage('go depth 25')
       // this.stockfish.postMessage('go movetime 500')
       return
     }
@@ -121,7 +121,7 @@ export class Stockfish {
 
   public sendUserMove(position: string, move: string) {
     this.stockfish.postMessage(`position fen ${position} moves ${move}`)
-    ;this.stockfish.postMessage('go depth 25')
+    this.stockfish.postMessage('go depth 25')
     // this.stockfish.postMessage('go movetime 500')
   }
 

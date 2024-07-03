@@ -138,7 +138,7 @@ function handleMove(move: MoveEvent) {
         console.log('lastPlayerMove', lastPlayerMove)
         console.log('playerMoveShouldBe', playerMoveShouldBe)
         const history = boardAPI?.getHistory()
-        console.log('history', history);        
+        console.log('history', history)
         emit('failure', history, originalExpectedMoves)
       }
     }
